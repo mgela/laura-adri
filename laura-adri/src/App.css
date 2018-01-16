@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Parisienne');
 
 .topMenu__wrapper {
   flex-direction: column;
-  background-color: coral;
+  background-color: #ffff;
   display: flex;
   flex-direction: row;
+  height: 15vh;
 }
 
 .topMenu {
@@ -14,9 +17,36 @@
   justify-content: space-around;
   order: 2;
   align-items: center;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+  font-size: 30px;
 }
 .topMenu__logo{
   height: inherit;
   width: 40%;
   background-color: #ffff;
+}
+.saveTheDate{
+  position: absolute;
+  max-width: 100%;
+  /* transition: all 1s; */
+
+}
+.image__wrapper{
+  display: flex;
+}
+.text__save{
+  position: relative;
+  color: #ffff;
+  z-index: 99;
+  margin-top: 20%;
+  margin-left: 30%;
+  font-family: 'Amatic SC';
+  font-size: 5em;
+}
+.adrilaura{
+font-family: 'Parisienne';
+font-size: 3em;
+/* margin-left: 10%; */
+align-self: center;
 }
