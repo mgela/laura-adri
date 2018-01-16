@@ -1,0 +1,22 @@
+
+.topMenu__wrapper {
+  flex-direction: column;
+  background-color: coral;
+  display: flex;
+  flex-direction: row;
+}
+
+.topMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-around;
+  order: 2;
+  align-items: center;
+}
+.topMenu__logo{
+  height: inherit;
+  width: 40%;
+  background-color: #ffff;
+}
