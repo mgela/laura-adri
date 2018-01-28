@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import { HamburgerButton } from 'react-hamburger-button';
 import '../App.css';
 
 
 export default class MenuComponent extends Component {
   render() {
     return (
-      <div className="hotels__wrapper">
+      <div className="menuWrapper">
         <div className='boda'>
           <img className="bodaIcon" src={require ("../assets/ring.png")}/>
           <h2>La Boda</h2>

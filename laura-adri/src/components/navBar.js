@@ -3,7 +3,17 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../animate.css';
 
-export default class Landing extends Component {
+export default class NavBar extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      open: true,
+    }
+  }
+
+  logger = ()=> {
+    this.setState({open: false})
+  }
   //
   render() {
     return (
@@ -11,8 +21,14 @@ export default class Landing extends Component {
         <div className="topMenu__logo">
           <h1 className="topMenu__title">Laura i Adri</h1>
         </div>
+        <div className='imageHolder'>
+          <img className="menuIcon" src={require ("../assets/menu.png")}/>
+        </div>
+        {/* <img className="bodaIcon" src={require ("../assets/menu.png")}/> */}
         <ul className="topMenu animated fadeInRight">
-          <li>La Boda</li>
+              <li onClick={this.logger.bind(this)}>La Boda</li>
+
+
           <li>Hotels</li>
           <li>Vestimenta</li>
           <li>RSVP</li>
@@ -20,6 +36,7 @@ export default class Landing extends Component {
           <li>Video</li>
           <li>Regal</li>
         </ul>
+
       </div>
     );
   }
