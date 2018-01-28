@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import '../App.css';
 
-export default class Horari extends Component {
+export default class DressCode extends Component {
   render() {
     return (
-      <h1>I AM THE WEDDING COMPONENT</h1>
+      <h1>I AM THE dresscode COMPONENT</h1>
     );
   }
 }

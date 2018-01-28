@@ -39,6 +39,7 @@
 .topMenu *:hover {
   cursor: pointer;
   transform: skew(-20deg);
+  border-bottom: 1px solid;
 
 }
 .topMenu__logo{
@@ -70,6 +71,7 @@ font-family: 'Amatic SC';
 font-size: 36px;
 margin-left: 10%;
 align-self: center;
+cursor: pointer;
 }
 
 .sideMenu {
@@ -142,6 +144,9 @@ align-self: center;
 @media (max-width: 900px) {
   .topMenu {
     display: none;
+  }
+  .topMenu__logo{
+    width: 40%;
   }
   .menuIcon{
     align-self: flex-end;

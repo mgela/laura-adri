@@ -19,13 +19,13 @@ export default class NavBar extends Component {
     return (
       <div className="topMenu__wrapper">
         <div className="topMenu__logo">
-          <h1 className="topMenu__title">Laura i Adri</h1>
+          <h1 className="topMenu__title animated fadeIn">Laura i Adri</h1>
         </div>
         <div className='imageHolder'>
           <img className="menuIcon" src={require ("../assets/menu.png")}/>
         </div>
         {/* <img className="bodaIcon" src={require ("../assets/menu.png")}/> */}
-        <ul className="topMenu animated fadeInRight">
+        <ul className="topMenu animated fadeIn">
               <li onClick={this.logger.bind(this)}>La Boda</li>
 
 

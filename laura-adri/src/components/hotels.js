@@ -8,7 +8,7 @@ export default class Fotos extends Component {
     return (
       <div className="hotels__wrapper">
         <div className='hotel__1'>
-
+          <h1>I AM THE HOTELS COMPONENT</h1>
         </div>
         <div className='hotel__2'>
 
