@@ -18,21 +18,27 @@ import WelcomePage from './components/welcomePage'
 class App extends Component {
   constructor(){
        super();
-       this.state = {render:''}
+       this.state = {
+         render:'',
+         menuVisible: false,
+       }
    }
-
+   handleOption = (compName)=> {
+     this.setState({render:compName})
+   }
    handleClick(compName, e){
        console.log(compName);
        this.setState({render:compName});
    }
    renderSubComp(){
        switch(this.state.render){
-           case 'menu': return <MenuComponent/>
+           case 'menu': return <MenuComponent handleClick={this.handleOption}/>
            case 'boda' : return <Horari/>
            case 'regals': return <Regals/>
            case 'dress': return <DressCode/>
            case 'hotels': return <Hotels/>
            case 'rsvp': return <Rsvp/>
+           case 'welcomePage': return <WelcomePage/>
        }
    }
 
@@ -42,22 +48,32 @@ class App extends Component {
      }
    }
 
+   logger = ()=> {
+     console.log(this.state);
+   }
    reset = ()=> {
      this.setState({render: ""})
    }
 
+   showMenu = ()=> {
+     this.setState({menuVisible: true})
+   }
+
+   openorclose = ()=> {
+     if (this.state.render === 'menu') return
+   }
   render() {
     return (
       <div className="appContainer">
         {/* <NavBar/> */}
         <div className="topMenu__wrapper">
           <div className="topMenu__logo">
-            <h1  onClick={this.reset}className="topMenu__title animated fadeIn">Laura i Adri</h1>
+            <h1  onClick={this.reset} className="topMenu__title animated fadeIn">Laura i Adri</h1>
           </div>
-          <div className='imageHolder'>
-            <img className="menuIcon" src={require ("./assets/menu.png")}/>
+          <div onClick={this.handleClick.bind(this, 'menu')} className='imageHolder'>
+            <img onClick={this.handleClick.bind(this, 'menu')} className="menuIcon" src={require ("./assets/menu.png")}/>
           </div>
-          {/* <img className="bodaIcon" src={require ("../assets/menu.png")}/> */}
+          {/* <img className="bodaIcon" src={require ("./assets/menu.png")}/> */}
           <ul className="topMenu animated fadeIn">
                 {/* <li onClick={this.logger.bind(this)}>La Boda</li> */}
             <li onClick={this.handleClick.bind(this, 'boda')}>La Boda</li>
@@ -65,6 +81,7 @@ class App extends Component {
             <li onClick={this.handleClick.bind(this, 'rsvp')}>RSVP</li>
             <li onClick={this.handleClick.bind(this, 'hotels')}>Hotels</li>
             <li onClick={this.handleClick.bind(this, 'regals')}>Regal</li>
+            <li onClick={this.logger}>state logger</li>
             {/* <li>Vestimenta</li>
             <li>RSVP</li>
             <li>Album</li>
