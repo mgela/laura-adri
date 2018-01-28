@@ -3,15 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
 
 .appContainer{
-  display: flex;
-  flex-direction: column;
+
+
 }
 .topMenu__wrapper {
   display: flex;
   flex-direction: row;
   height: 60px;
   background-image: url('https://previews.123rf.com/images/smuay/smuay1211/smuay121100045/16309419-close-up-recycle-paper-texture.jpg');
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
 }
 
@@ -69,38 +69,55 @@ align-self: center;
 /* /////////////MENU/////////////////////// */
 
 .hotels__wrapper{
-  height: 80vh;
+  height: 90vh;
   width: 100%;
-  background-color: lime;
+
   display: flex;
   flex-wrap: wrap;
 }
+
 .boda{
   width: 50%;
-  height: 50%;
-  background-color: purple;
+  height: 35%;
+
+  overflow: hidden;
 }
 .hotels{
   width: 50%;
-  height: 50%;
-  background-color: black;
+  height: 35%;
+  
+  overflow: hidden;
 }
 .dresscode{
   width: 50%;
-  height: 50%;
-  background-color: white;
+  height: 35%;
+
+  overflow: hidden;
 }
 .rsvp{
   width: 50%;
-  height: 50%;
-  background-color: orange;
+  height: 35%;
+
+  overflow: hidden;
 }
 .regal{
   width: 100%;
-  height: 50%;
-  background-color: blue;
+  height: 32%;
+
+  overflow: hidden;
+  border-top: 2px solid;
+}
+.bodaIcon{
+  width: 72px;
+  height: 72px;
 }
 
+.hotels__wrapper * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 /* @media (max-width: 900px) {
   .topMenu {
