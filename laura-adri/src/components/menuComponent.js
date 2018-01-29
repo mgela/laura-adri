@@ -19,7 +19,7 @@ export default class MenuComponent extends Component {
     this.props.navigateR()
   }
   linkRegals = ()=> {
-    this.props.navigateH()
+    this.props.navigateRegals()
   }
   // linkHotels = ()=> {
   //   this.props.navigateH()

@@ -213,6 +213,17 @@ cursor: pointer;
 
   }
 }
+
+/* ////////////////HORARI////////////////////// */
+.horari__wrapper {
+  height: 100vh;
+  display: flex;
+  background-color: aquamarine;
+}
+.horariImageWrapper{
+  margin-top: 20%;
+
+}
 /* very small */
 
 @media (max-width: 900px) {
