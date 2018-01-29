@@ -32,17 +32,14 @@ class App extends Component {
 
 
    renderSubComp = ()=> {
-
      switch(this.state.render){
          case 'boda' : return <Horari/>
          case 'regals': return <Regals/>
          case 'dress': return <DressCode/>
          case 'hotels': return <Hotels/>
          case 'rsvp': return <Rsvp/>
-         // case "": return <WelcomePage/>
-         // default:
-         // return <WelcomePage/>
      }
+
    }
 
    renderMain = ()=> {
@@ -52,20 +49,55 @@ class App extends Component {
    }
 
 
+
    reset = ()=> {
-     this.setState({render: '', menuVisible: false})
+     this.setState({render: false, menuVisible: false})
      this.renderSubComp();
    }
 
    showMenu = ()=> {
      this.setState({menuVisible: !this.state.menuVisible})
-     this.setState({render: true})
+     this.setState({render: false})
+   }
+   //navigation
+   navigateHotels = ()=> {
+     this.setState({render: 'hotels', menuVisible: false}),
+     this.renderSubComp();
+   }
+   navigateBoda = ()=> {
+     this.setState({render: 'boda', menuVisible: false}),
+     this.renderSubComp();
+   }
+
+   navigateDress = ()=> {
+     this.setState({render: 'dress', menuVisible: false}),
+     this.renderSubComp();
+   }
+
+   navigateRsvp = ()=> {
+     this.setState({render: 'rsvp', menuVisible: false}),
+     this.renderSubComp();
+   }
+   navigateRegals = ()=> {
+     this.setState({render: 'regals', menuVisible: false}),
+     this.renderSubComp();
    }
 
    menuOr = ()=> {
      if (this.state.menuVisible === true){
        return (
-         <MenuComponent/>
+         <MenuComponent
+           handleLink={this.handleOption}
+           handleRender={this.renderSubComp}
+           reset={this.reset}
+           showMenu = {this.showMenu}
+           navigateH = {this.navigateHotels}
+           navigateB = {this.navigateBoda}
+           navigateD = {this.navigateDress}
+           navigateR = {this.navigateRsvp}
+           navigateRegals = {this.navigateRegals}
+
+        />
        )
      } else {
       this.renderSubComp()
@@ -80,12 +112,18 @@ class App extends Component {
           handle = {this.handleOption}
           showMenu = {this.showMenu}
           reset = {this.reset}
+          state={this.state}
+          navigateH = {this.navigateHotels}
+          navigateB = {this.navigateBoda}
+          navigateD = {this.navigateDress}
+          navigateR = {this.navigateRsvp}
+          navigateRegals = {this.navigateRegals}
         />
 
         {this.menuOr()}
         {this.renderMain()}
-        {/* {this.renderSubComp()} */}
-        {/* <MenuComponent/> */}
+        {this.renderSubComp()}
+        {/* <DressCode/> */}
 
       </div>
 

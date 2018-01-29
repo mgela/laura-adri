@@ -10,8 +10,9 @@
   display: flex;
   flex-direction: row;
   height: 60px;
-  background-image: url('https://i.imgur.com/7lrX98H.jpg');
-  position: sticky;
+  background-image: url('https://i.imgur.com/VI6c8Xe.png');
+  position: fixed;
+  z-index: 1000;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +62,7 @@
 .text__save{
   position: relative;
   color: #ffff;
-  z-index: 99;
+
   margin-top: 20%;
   margin-left: 30%;
   font-family: 'Amatic SC';
@@ -69,7 +70,7 @@
 }
 .topMenu__title{
 font-family: 'Amatic SC';
-font-size: 36px;
+font-weight: bold;
 margin-left: 10%;
 align-self: center;
 cursor: pointer;
@@ -192,6 +193,20 @@ cursor: pointer;
   height: 50%;
   background-color: orange
 }
+/* ////////DressCode/////////////////// */
+
+.dresscode__wrapper{
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.dressImageWrapper{
+  height: 200px;
+  width: 200px;
+  background-color: lime;
+}
+
 @media (min-width: 900px) {
   .imageHolder{
   display: none;
@@ -202,7 +217,8 @@ cursor: pointer;
 
 @media (max-width: 900px) {
   .menuWrapper{
-  padding-top: 10%;
+  padding-top: 20%;
+  height: 100vh;
   }
   .hotels__wrapper{
     flex-wrap: nowrap;
@@ -232,6 +248,6 @@ cursor: pointer;
 
   }
   .topMenu__title{
-    font-size: 24px;
+    font-size: 40px;
   }
 }
