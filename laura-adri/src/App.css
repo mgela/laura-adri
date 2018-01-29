@@ -202,6 +202,9 @@ cursor: pointer;
 /* very small */
 
 @media (max-width: 900px) {
+  .menuWrapper{
+  padding-top: 10%;
+  }
   .hotels__wrapper{
     flex-wrap: nowrap;
     flex-direction: column;
