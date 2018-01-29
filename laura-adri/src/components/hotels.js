@@ -8,22 +8,22 @@ export default class Fotos extends Component {
     return (
       <div className="hotels__wrapper">
         <div className='hotel__1'>
-          <h1>I AM THE HOTELS COMPONENT</h1>
+          <h1>HOTEL</h1>
         </div>
         <div className='hotel__2'>
-
+          <h1>HOTEL</h1>
         </div>
         <div className='hotel__3'>
-
+          <h1>HOTEL</h1>
         </div>
         <div className='hotel__4'>
-
+          <h1>HOTEL</h1>
         </div>
         <div className='hotel__5'>
-
+          <h1>HOTEL</h1>
         </div>
         <div className='hotel__6'>
-
+          <h1>HOTEL</h1>
         </div>
       </div>
     );

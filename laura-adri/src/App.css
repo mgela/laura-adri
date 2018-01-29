@@ -10,8 +10,9 @@
   display: flex;
   flex-direction: row;
   height: 60px;
-  background-image: url('https://previews.123rf.com/images/smuay/smuay1211/smuay121100045/16309419-close-up-recycle-paper-texture.jpg');
-  /* position: fixed; */
+    background-image: url('https://i.imgur.com/7lrX98H.jpg');
+  position: fixed;
+  z-index: 100;
   width: 100%;
 
   justify-content: space-between;
@@ -47,11 +48,13 @@
   width: 20%;
   background-color: #ffff;
   display: flex;
-  background-image: url('https://previews.123rf.com/images/smuay/smuay1211/smuay121100045/16309419-close-up-recycle-paper-texture.jpg');
+  background-image: url('https://i.imgur.com/7lrX98H.jpg');
 }
 .saveTheDate{
-  position: fixed;
-  max-width: 100%;
+
+
+  /* height: 100%; */
+
 }
 .image__wrapper{
   display: flex;
@@ -74,7 +77,7 @@ align-self: center;
 cursor: pointer;
 }
 .cursorMenu{
-  cursor: pointer;
+
 }
 .sideMenu {
   width: 100%;
@@ -135,6 +138,61 @@ cursor: pointer;
   align-items: center;
   justify-content: center;
 }
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+.saveTheDateMobile{
+    height: 100vh;
+    width: 100%;
+}
+.saveTheDateDesktop{
+    height: 91vh;
+    width: 100%;
+}
+/* //////////HOTELS////////////////////////// */
+.hotels__wrapper{
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.hotels__wrapper * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotel__1{
+  width: 33%;
+  height: 50%;
+  background-color: purple;
+}
+.hotel__2{
+  width: 33%;
+  height: 50%;
+  background-color: coral;
+
+}
+.hotel__3{
+  width: 33%;
+  height: 50%;
+  background-color: lime;
+}
+.hotel__4{
+  width: 33%;
+  height: 50%;
+  background-color: white;
+}
+.hotel__5{
+  width: 33%;
+  height: 50%;
+  background-color: yellow;
+}
+.hotel__6{
+  width: 33%;
+  height: 50%;
+  background-color: orange
+}
 @media (min-width: 900px) {
   .imageHolder{
   display: none;
@@ -144,6 +202,19 @@ cursor: pointer;
 /* very small */
 
 @media (max-width: 900px) {
+  .hotels__wrapper{
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: auto;
+  }
+  .hotels__wrapper * {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .saveTheDate{
+
+  }
   .topMenu {
     display: none;
   }
