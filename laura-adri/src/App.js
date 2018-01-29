@@ -39,7 +39,9 @@ class App extends Component {
          case 'dress': return <DressCode/>
          case 'hotels': return <Hotels/>
          case 'rsvp': return <Rsvp/>
-         case "": return <WelcomePage/>
+         // case "": return <WelcomePage/>
+         // default:
+         // return <WelcomePage/>
      }
    }
 
@@ -51,13 +53,13 @@ class App extends Component {
 
 
    reset = ()=> {
-     this.setState({render: "", menuVisible: false})
+     this.setState({render: '', menuVisible: false})
      this.renderSubComp();
    }
 
    showMenu = ()=> {
      this.setState({menuVisible: !this.state.menuVisible})
-     this.setState({render: ''})
+     this.setState({render: true})
    }
 
    menuOr = ()=> {

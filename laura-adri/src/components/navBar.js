@@ -13,10 +13,9 @@ export default class NavBar extends Component {
 
   logger = ()=> {
     console.log(this.refs);
-    this.setState({open: false})
   }
 
-  clickMenu = (arg)=> {
+  clickMenu = ()=> {
     this.props.showMenu();
   }
   //
@@ -30,7 +29,7 @@ export default class NavBar extends Component {
           <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/>
         </div>
         <ul className="topMenu animated fadeIn">
-          <li onClick={this.logger.bind(this)}>La Boda</li>
+          <li>La Boda</li>
           <li>Hotels</li>
           <li>Vestimenta</li>
           <li>RSVP</li>
