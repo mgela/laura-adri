@@ -53,7 +53,11 @@ class App extends Component {
      this.setState({render: false, menuVisible: false, loadHome: true})
      this.renderSubComp();
    }
-
+   showMenu2 = ()=> {
+     this.setState({loadHome: true})
+     this.setState({menuVisible: !this.state.menuVisible})
+     this.setState({render: false})
+   }
    showMenu = ()=> {
      this.setState({loadHome: !this.state.loadHome})
      this.setState({menuVisible: !this.state.menuVisible})
@@ -111,6 +115,7 @@ class App extends Component {
         <NavBar
           handle = {this.handleOption}
           showMenu = {this.showMenu}
+          showMenu2 = {this.showMenu2}
           reset = {this.reset}
           state={this.state}
           navigateH = {this.navigateHotels}

@@ -29,11 +29,14 @@ export default class NavBar extends Component {
   clickMenu = ()=> {
     this.props.showMenu();
   }
+  clickMenu2 = ()=> {
+    this.props.showMenu2();
+  }
   //icon menu
   iconChoser = ()=> {
     if (this.props.state.menuVisible){
       return (
-        <img className="menuIcon animated rotateIn" onClick={this.clickMenu} src={require ("../assets/closemenu.png")}/>
+        <img className="menuIcon animated rotateIn" onClick={this.clickMenu2} src={require ("../assets/closemenu.png")}/>
       )
     } else return( <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/> )
   }
