@@ -75,6 +75,7 @@ margin-left: 10%;
 align-self: center;
 cursor: pointer;
 }
+
 .cursorMenu{
 
 }
@@ -210,18 +211,13 @@ cursor: pointer;
   background-color: lime;
 }
 
-@media (min-width: 900px) {
-  .imageHolder{
-  display: none;
-
-  }
-}
 
 /* ////////////////HORARI////////////////////// */
 .horari__wrapper {
   height: 100vh;
   display: flex;
   background-color: aquamarine;
+  background-image: url('https://i.imgur.com/7lrX98H.jpg');
 }
 .horariImageWrapper{
   margin-top: 20%;
@@ -229,6 +225,16 @@ cursor: pointer;
 }
 /* very small */
 
+@media (min-width: 900px) {
+  .imageHolder {
+  display: none;
+  }
+  .topMenu__title{
+    font-size: 44px;
+    font-weight: bold;
+
+  }
+}
 @media (max-width: 900px) {
   .menuWrapper{
   padding-top: 20%;

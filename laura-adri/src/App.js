@@ -16,11 +16,13 @@ import Hotels from './components/hotels'
 import WelcomePage from './components/welcomePage'
 
 class App extends Component {
+
   constructor(){
        super();
        this.state = {
          render:'',
          menuVisible: false,
+         loadHome: true,
        }
    }
 
@@ -39,47 +41,45 @@ class App extends Component {
          case 'hotels': return <Hotels/>
          case 'rsvp': return <Rsvp/>
      }
-
    }
 
    renderMain = ()=> {
-     if (!this.state.render){
+     if (this.state.loadHome){
        return <WelcomePage/>
      }
    }
 
-
-
    reset = ()=> {
-     this.setState({render: false, menuVisible: false})
+     this.setState({render: false, menuVisible: false, loadHome: true})
      this.renderSubComp();
    }
 
    showMenu = ()=> {
+     this.setState({loadHome: !this.state.loadHome})
      this.setState({menuVisible: !this.state.menuVisible})
      this.setState({render: false})
    }
    //navigation
    navigateHotels = ()=> {
-     this.setState({render: 'hotels', menuVisible: false}),
+     this.setState({render: 'hotels', menuVisible: false, loadHome: false}),
      this.renderSubComp();
    }
    navigateBoda = ()=> {
-     this.setState({render: 'boda', menuVisible: false}),
+     this.setState({render: 'boda', menuVisible: false, loadHome: false}),
      this.renderSubComp();
    }
 
    navigateDress = ()=> {
-     this.setState({render: 'dress', menuVisible: false}),
+     this.setState({render: 'dress', menuVisible: false, loadHome: false}),
      this.renderSubComp();
    }
 
    navigateRsvp = ()=> {
-     this.setState({render: 'rsvp', menuVisible: false}),
+     this.setState({render: 'rsvp', menuVisible: false, loadHome: false}),
      this.renderSubComp();
    }
    navigateRegals = ()=> {
-     this.setState({render: 'regals', menuVisible: false}),
+     this.setState({render: 'regals', menuVisible: false, loadHome: false}),
      this.renderSubComp();
    }
 
