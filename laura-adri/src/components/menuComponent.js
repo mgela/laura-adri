@@ -5,9 +5,14 @@ import '../App.css';
 
 export default class MenuComponent extends Component {
 
+  link = (comp)=> {
+    this.props.handleClick(comp)
+    this.props.showMenu();
+  }
+
   render() {
     return (
-      <div className="menuWrapper">
+      <div className="menuWrapper animated fadeIn">
         <div className='boda'>
           <img className="bodaIcon" src={require ("../assets/ring.png")}/>
           <h2>La Boda</h2>

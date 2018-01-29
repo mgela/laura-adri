@@ -12,23 +12,25 @@ export default class NavBar extends Component {
   }
 
   logger = ()=> {
+    console.log(this.refs);
     this.setState({open: false})
+  }
+
+  clickMenu = (arg)=> {
+    this.props.showMenu();
   }
   //
   render() {
     return (
       <div className="topMenu__wrapper">
         <div className="topMenu__logo">
-          <h1 className="topMenu__title animated fadeIn">Laura i Adri</h1>
+          <h1 onClick={this.props.reset} className="topMenu__title animated fadeIn">Laura i Adri</h1>
         </div>
         <div className='imageHolder'>
-          <img className="menuIcon" src={require ("../assets/menu.png")}/>
+          <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/>
         </div>
-        {/* <img className="bodaIcon" src={require ("../assets/menu.png")}/> */}
         <ul className="topMenu animated fadeIn">
-              <li onClick={this.logger.bind(this)}>La Boda</li>
-
-
+          <li onClick={this.logger.bind(this)}>La Boda</li>
           <li>Hotels</li>
           <li>Vestimenta</li>
           <li>RSVP</li>
@@ -36,7 +38,6 @@ export default class NavBar extends Component {
           <li>Video</li>
           <li>Regal</li>
         </ul>
-
       </div>
     );
   }

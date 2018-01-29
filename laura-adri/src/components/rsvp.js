@@ -6,7 +6,10 @@ import '../App.css';
 export default class Rsvp extends Component {
   render() {
     return (
-      <h1>I am the regals component</h1>
+      <div className="rsvp__wrapper">
+
+        
+      </div>
     );
   }
 }

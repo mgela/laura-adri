@@ -23,23 +23,24 @@ class App extends Component {
          menuVisible: false,
        }
    }
+
    handleOption = (compName)=> {
      this.setState({render:compName})
+     this.renderSubComp()
+     console.log(this.state);
    }
-   handleClick(compName, e){
-       console.log(compName);
-       this.setState({render:compName});
-   }
-   renderSubComp(){
-       switch(this.state.render){
-           case 'menu': return <MenuComponent handleClick={this.handleOption}/>
-           case 'boda' : return <Horari/>
-           case 'regals': return <Regals/>
-           case 'dress': return <DressCode/>
-           case 'hotels': return <Hotels/>
-           case 'rsvp': return <Rsvp/>
-           case 'welcomePage': return <WelcomePage/>
-       }
+
+
+   renderSubComp = ()=> {
+
+     switch(this.state.render){
+         case 'boda' : return <Horari/>
+         case 'regals': return <Regals/>
+         case 'dress': return <DressCode/>
+         case 'hotels': return <Hotels/>
+         case 'rsvp': return <Rsvp/>
+         case "": return <WelcomePage/>
+     }
    }
 
    renderMain = ()=> {
@@ -48,50 +49,40 @@ class App extends Component {
      }
    }
 
-   logger = ()=> {
-     console.log(this.state);
-   }
+
    reset = ()=> {
-     this.setState({render: ""})
+     this.setState({render: "", menuVisible: false})
+     this.renderSubComp();
    }
 
    showMenu = ()=> {
-     this.setState({menuVisible: true})
+     this.setState({menuVisible: !this.state.menuVisible})
+     this.setState({render: ''})
    }
 
-   openorclose = ()=> {
-     if (this.state.render === 'menu') return
+   menuOr = ()=> {
+     if (this.state.menuVisible === true){
+       return (
+         <MenuComponent/>
+       )
+     } else {
+      this.renderSubComp()
+     }
    }
+
+
   render() {
     return (
       <div className="appContainer">
-        {/* <NavBar/> */}
-        <div className="topMenu__wrapper">
-          <div className="topMenu__logo">
-            <h1  onClick={this.reset} className="topMenu__title animated fadeIn">Laura i Adri</h1>
-          </div>
-          <div onClick={this.handleClick.bind(this, 'menu')} className='imageHolder'>
-            <img onClick={this.handleClick.bind(this, 'menu')} className="menuIcon" src={require ("./assets/menu.png")}/>
-          </div>
-          {/* <img className="bodaIcon" src={require ("./assets/menu.png")}/> */}
-          <ul className="topMenu animated fadeIn">
-                {/* <li onClick={this.logger.bind(this)}>La Boda</li> */}
-            <li onClick={this.handleClick.bind(this, 'boda')}>La Boda</li>
-            <li onClick={this.handleClick.bind(this, 'dress')}>Vestimenta</li>
-            <li onClick={this.handleClick.bind(this, 'rsvp')}>RSVP</li>
-            <li onClick={this.handleClick.bind(this, 'hotels')}>Hotels</li>
-            <li onClick={this.handleClick.bind(this, 'regals')}>Regal</li>
-            <li onClick={this.logger}>state logger</li>
-            {/* <li>Vestimenta</li>
-            <li>RSVP</li>
-            <li>Album</li>
-            <li>Video</li>
-            <li>Regal</li> */}
-          </ul>
+        <NavBar
+          handle = {this.handleOption}
+          showMenu = {this.showMenu}
+          reset = {this.reset}
+        />
 
-        </div>
+        {this.menuOr()}
         {this.renderMain()}
-        {this.renderSubComp()}
+        {/* {this.renderSubComp()} */}
         {/* <MenuComponent/> */}
 
       </div>
