@@ -10,13 +10,13 @@
   display: flex;
   flex-direction: row;
   height: 60px;
-  background-image: url('https://i.imgur.com/VI6c8Xe.png');
+  /* background-image: url('https://i.imgur.com/7lrX98H.jpg'); */
   position: fixed;
   z-index: 1000;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  opacity: 100;
+  opacity:  1000;
 }
 
 .topMenu {
@@ -108,8 +108,10 @@ cursor: pointer;
 .dresscode{
   width: 50%;
   height: 35%;
-
   overflow: hidden;
+}
+.dresscode * {
+  cursor: pointer;
 }
 .rsvp{
   width: 50%;
@@ -122,6 +124,7 @@ cursor: pointer;
   height: 32%;
   overflow: hidden;
 }
+
 
 .menuIcon{
   width: 24px;

@@ -10,9 +10,9 @@ export default class NavBar extends Component {
       open: true,
     }
   }
-
+  //navigation
   linkBoda = ()=> {
-    this.props.navigateBoda()
+    this.props.navigateB()
   }
   linkHotels = ()=> {
     this.props.navigateH()
@@ -29,33 +29,30 @@ export default class NavBar extends Component {
   clickMenu = ()=> {
     this.props.showMenu();
   }
-
+  //icon menu
   iconChoser = ()=> {
     if (this.props.state.menuVisible){
       return (
         <img className="menuIcon animated rotateIn" onClick={this.clickMenu} src={require ("../assets/closemenu.png")}/>
       )
     } else return( <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/> )
-
   }
   //
   render() {
     return (
       <div className="topMenu__wrapper">
-        <div className="topMenu__logo">
+        <h1 onClick={this.props.reset} className="topMenu__title ">L & A</h1>
+        {/* <div className="topMenu__logo">
           <h1 onClick={this.props.reset} className="topMenu__title ">L & A</h1>
-        </div>
+        </div> */}
         <div className='imageHolder'>
           {this.iconChoser()}
-          {/* <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/> */}
         </div>
         <ul className="topMenu animated fadeIn">
-          <li>La Boda</li>
+          <li onClick={this.linkBoda}>La Boda</li>
           <li onClick={this.linkHotels}>Hotels</li>
           <li onClick={this.linkDress}>Vestimenta</li>
           <li onClick={this.linkRsvp}>RSVP</li>
-          <li>Album</li>
-          <li>Video</li>
           <li onClick={this.linkRegals}>Regal</li>
         </ul>
       </div>
