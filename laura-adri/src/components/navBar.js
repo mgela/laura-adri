@@ -26,16 +26,16 @@ export default class NavBar extends Component {
   linkRegals = ()=> {
     this.props.navigateRegals()
   }
-
   clickMenu = ()=> {
     this.props.showMenu();
   }
+
   iconChoser = ()=> {
     if (this.props.state.menuVisible){
       return (
-        <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/>
+        <img className="menuIcon animated rotateIn" onClick={this.clickMenu} src={require ("../assets/closemenu.png")}/>
       )
-    } else return <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/closemenu.png")}/>
+    } else return( <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/> )
 
   }
   //
@@ -46,8 +46,8 @@ export default class NavBar extends Component {
           <h1 onClick={this.props.reset} className="topMenu__title ">L & A</h1>
         </div>
         <div className='imageHolder'>
-          {/* {this.iconChoser} */}
-          <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/>
+          {this.iconChoser()}
+          {/* <img className="menuIcon" onClick={this.clickMenu} src={require ("../assets/menu.png")}/> */}
         </div>
         <ul className="topMenu animated fadeIn">
           <li>La Boda</li>
