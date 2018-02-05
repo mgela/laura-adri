@@ -8,7 +8,6 @@ export default class Rsvp extends Component {
     return (
       <div className="horari__wrapper">
         <div className="horariImageWrapper">
-          
 
         </div>
         <div>

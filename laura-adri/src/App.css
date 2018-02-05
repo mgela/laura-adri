@@ -156,7 +156,6 @@ cursor: pointer;
 }
 /* //////////HOTELS////////////////////////// */
 .hotels__wrapper{
-
   height: 100vh;
   display: flex;
   padding-top: 7%;
@@ -165,14 +164,13 @@ cursor: pointer;
   align-items: center;
   background-image: url('https://i.imgur.com/7lrX98H.jpg');
   overflow: scroll;
-
-
 }
+
 .hotels__wrapper * {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 2%;
+  margin-top: 7%;
   box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.15);
   transition: box-shadow 0.35s ease;
 }
