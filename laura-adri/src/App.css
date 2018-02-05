@@ -10,9 +10,9 @@
   display: flex;
   flex-direction: row;
   height: 60px;
-  /* background-image: url('https://i.imgur.com/7lrX98H.jpg'); */
+  background-image: url('https://i.imgur.com/7lrX98H.jpg');
   position: fixed;
-  z-index: 1000;
+  z-index: 999;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -156,46 +156,60 @@ cursor: pointer;
 }
 /* //////////HOTELS////////////////////////// */
 .hotels__wrapper{
+
   height: 100vh;
   display: flex;
+  padding-top: 7%;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('https://i.imgur.com/7lrX98H.jpg');
+
 
 }
 .hotels__wrapper * {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 2%;
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.15);
+  transition: box-shadow 0.35s ease;
 }
+
+.hotels__wrapper *:hover{
+  box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.45);
+}
+
 .hotel__1{
-  width: 33%;
+  width: 45%;
   height: 50%;
-  background-color: purple;
+
 }
 .hotel__2{
-  width: 33%;
+  width: 45%;
   height: 50%;
-  background-color: coral;
+
 
 }
 .hotel__3{
-  width: 33%;
+  width: 45%;
   height: 50%;
-  background-color: lime;
+
 }
 .hotel__4{
-  width: 33%;
+  width: 45%;
   height: 50%;
-  background-color: white;
+
 }
 .hotel__5{
-  width: 33%;
+  width: 45%;
   height: 50%;
-  background-color: yellow;
+
 }
 .hotel__6{
-  width: 33%;
+  width: 45%;
   height: 50%;
-  background-color: orange
+  border: 2px solid;
 }
 /* ////////DressCode/////////////////// */
 
@@ -219,6 +233,7 @@ cursor: pointer;
   background-color: aquamarine;
   background-image: url('https://i.imgur.com/7lrX98H.jpg');
 }
+
 .horariImageWrapper{
   margin-top: 20%;
 
@@ -226,19 +241,24 @@ cursor: pointer;
 /* very small */
 
 @media (min-width: 900px) {
+  .image__wrapper{
+    position: fixed;
+  }
   .imageHolder {
   display: none;
   }
   .topMenu__title{
     font-size: 44px;
     font-weight: bold;
-
   }
 }
 @media (max-width: 900px) {
   .menuWrapper{
   padding-top: 20%;
   height: 100vh;
+  }
+  .menuWrapper * {
+  cursor: pointer;
   }
   .hotels__wrapper{
     flex-wrap: nowrap;

@@ -20,6 +20,9 @@
 .animated.hinge {
   animation-duration: 2s;
 }
+.animated.fadeInRight {
+  animation-duration: 0.5s;
+}
 
 .animated.flipOutX,
 .animated.flipOutY,

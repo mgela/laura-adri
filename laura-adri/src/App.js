@@ -59,7 +59,7 @@ class App extends Component {
      this.setState({render: false})
    }
    showMenu = ()=> {
-     this.setState({loadHome: !this.state.loadHome})
+     this.setState({loadHome: false})
      this.setState({menuVisible: !this.state.menuVisible})
      this.setState({render: false})
    }
