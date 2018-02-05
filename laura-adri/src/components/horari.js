@@ -3,12 +3,23 @@ import React, { Component } from 'react';
 import '../App.css';
 
 export default class Horari extends Component {
-  
+
   render() {
     return (
       <div className="horari__wrapper">
-        <div className="horariImageWrapper">
-          <h1>INFORMACIO DE LA BODA</h1>
+        <div className="horari__ImageWrapper">
+          <h1>FOTO AQUI</h1>
+        </div>
+        <div className="schedule__wrapper">
+          <span className="schedule__text">Laura i Adri</span>
+          <ul className="schedule__list">
+            <li>17:30 - Arribada a l'esglesia</li>
+            <li>18:00 - Cerèmonia</li>
+            <li>19:30 - Aperitiu</li>
+            <li>21:00 - Sopar</li>
+            <li>23:00 - Ball</li>
+            <li>04:00 - Fi de festa</li>
+          </ul>
         </div>
         <div>
         </div>
