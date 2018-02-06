@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import '../App.css';
+import horari from '../assets/fotos/horario.jpg'
 
 export default class Horari extends Component {
 
@@ -8,7 +9,7 @@ export default class Horari extends Component {
     return (
       <div className="horari__wrapper">
         <div className="horari__ImageWrapper">
-          <h1>FOTO AQUI</h1>
+          <img className="horari__image" src={horari}></img>
         </div>
         <div className="schedule__wrapper">
           <span className="schedule__text">Laura i Adri</span>

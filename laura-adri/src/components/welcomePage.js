@@ -3,6 +3,7 @@ import MediaQuery from 'react-responsive';
 
 import backgroundMobile from '../assets/mobile.jpg'
 import backgroundDesktop from '../assets/desktop.jpg'
+import save from '../assets/save.jpg'
 
 import '../App.css';
 
