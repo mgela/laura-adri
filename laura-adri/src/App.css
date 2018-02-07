@@ -173,11 +173,12 @@ cursor: pointer;
   overflow: scroll;
 }
 
-.hotels__wrapper div {
-  /* display: flex;
-  margin-top: 7%; */
-  /* box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.15);
-  transition: box-shadow 0.35s ease; */
+.hotels__wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Amatic SC';
+  font-size: 24px;
 }
 
 
@@ -308,7 +309,7 @@ height: auto;
 }
 .holder_picture{
   width: 100%;
-  height: 30%;
+  height: 250px;
 }
 
 
@@ -329,6 +330,7 @@ height: auto;
     margin-top: 10%;
   }
 }
+
 @media (max-width: 900px) {
   .menuWrapper{
   padding-top: 20%;
@@ -345,17 +347,19 @@ height: auto;
     overflow: scroll;
 
   }
+  .hotels__wrapper >div:first-child{
+    margin-top: 20%;
+  }
   .hotels__wrapper > div {
-    height: 400px;
-
+    height: 600px;
+    width: 80%;
+    margin-top: 15%;
     /* height: 3; */
     /* padding-top: 7%;
     width: 80%;
     height: 400px; */
   }
-  .hotel__1{
-    margin-top: 20%;
-  }
+
 
   .saveTheDate{
 
@@ -383,7 +387,7 @@ height: auto;
     justify-content: center;
   }
   .horari__image{
-    width: 60%;
+    width: 80%;
     height: auto;
   }
   .horari__ImageWrapper{
@@ -393,4 +397,12 @@ height: auto;
   .schedule__wrapper{
     width: 100%;
   }
+}
+@media screen and (max-width: 900px) and (min-width: 700px) {
+    .holder_picture{
+      height: 300px;
+    }
+    .hotels__wrapper > div {
+    width: 60%;
+    }
 }
