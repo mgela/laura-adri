@@ -5,6 +5,7 @@ import Slider from 'react-slick'
 
 
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import StarRatingComponent from 'react-star-rating-component';
 
 
 
@@ -56,8 +57,15 @@ export default class Fotos extends Component {
             <div className="slick_holder"><img className="holder_picture"src={morvedraThumb3}/></div>
           </Slider>
           <h3>Morvedra Nou</h3>
-          <p>Camí de Macarella Km 7</p>
-          <p>07760 Ciutadella de Menorca</p>
+          <StarRatingComponent
+            name="rate2"
+            editing={false}
+            starCount={5}
+            value={5}
+          />
+          <p>Camí de Macarella Km 7, 07760 Ciutadella</p>
+          <p>971 35 95 21</p>
+          <p>http://www.morvedranou.es/</p>
         </div>
         <div className='hotel__2'>
           <Slider {...settings}>
@@ -67,6 +75,15 @@ export default class Fotos extends Component {
             <div className="slick_holder"><img className="holder_picture"src={faustino4}/></div>
           </Slider>
           <h3>Hotel Faustino</h3>
+          <StarRatingComponent
+            name="rate2"
+            editing={false}
+            starCount={5}
+            value={5}
+          />
+          <p>Carrer de sa Muradeta 22, 07760 Ciutadella</p>
+          <p>971 489 191</p>
+          <p>https://www.canfaustino.com/</p>
         </div>
         <div className='hotel__3'>
           <Slider {...settings}>
@@ -74,7 +91,15 @@ export default class Fotos extends Component {
             <div className="slick_holder"><img className="holder_picture"src={casas2}/></div>
             <div className="slick_holder"><img className="holder_picture"src={casas3}/></div>
           </Slider>
+          <StarRatingComponent
+            name="rate2"
+            editing={false}
+            starCount={4}
+            value={4}
+          />
           <h3>Casas del Lago</h3>
+          <p>Lago de Cala'n Bosch, 07760 Ciutadella</p>
+          <p>971 387 831</p>
         </div>
         <div className='hotel__4'>
           <Slider {...settings}>
