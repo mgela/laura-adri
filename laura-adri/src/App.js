@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import './animate.css'
+import './hover-min.css'
 
 
 import NavBar from './components/navBar'
