@@ -29,6 +29,11 @@ import casas from '../assets/fotos/hotels/casas/casas.jpg'
 import casas2 from '../assets/fotos/hotels/casas/casas2.jpg'
 import casas3 from '../assets/fotos/hotels/casas/casas3.jpg'
 
+import agro from '../assets/fotos/hotels/agro tala/agro.jpg'
+import agro2 from  '../assets/fotos/hotels/agro tala/agro2.jpg'
+import agro1 from  '../assets/fotos/hotels/agro tala/agro1.jpg'
+import agro3 from  '../assets/fotos/hotels/agro tala/agro3.jpg'
+
 export default class Fotos extends Component {
 
 
@@ -103,11 +108,20 @@ export default class Fotos extends Component {
         </div>
         <div className='hotel__4'>
           <Slider {...settings}>
-            <div className="slick_holder"><img className="holder_picture"src={faustino}/></div>
-            <div className="slick_holder"><img className="holder_picture"src={faustino2}/></div>
-            <div className="slick_holder"><img className="holder_picture"src={faustino3}/></div>
-            <div className="slick_holder"><img className="holder_picture"src={faustino4}/></div>
+            <div className="slick_holder"><img className="holder_picture"src={agro}/></div>
+            <div className="slick_holder"><img className="holder_picture"src={agro1}/></div>
+            <div className="slick_holder"><img className="holder_picture"src={agro2}/></div>
+            <div className="slick_holder"><img className="holder_picture"src={agro3}/></div>
           </Slider>
+          <StarRatingComponent
+            name="rate2"
+            editing={false}
+            starCount={4}
+            value={4}
+          />
+          <h3>Agroturisme Ses Talaies</h3>
+          <p>RC-1, Km 0,9, 07760 Ciutadella</p>
+          <p>(+34) 603 63 41 21</p>
         </div>
         <div className='hotel__5'>
           <Slider {...settings}>

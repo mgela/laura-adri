@@ -91,53 +91,69 @@ cursor: pointer;
 /* /////////////MENU/////////////////////// */
 
 .menuWrapper{
-  height: 90vh;
+  /* outline : 2px solid black; */
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   background-image: url('https://i.imgur.com/7lrX98H.jpg');
+  font-family: 'Amatic SC';
+  font-size: 24px;
 }
 .bodaIcon{
+  /* margin-top: 10%; */
+  width: 20%;
+  height: auto;
+}
+.bodaIcon1{
+  /* margin-top: 10%; */
   width: 20%;
   height: auto;
 }
 .regal{
   width: 50%;
-  height: 35%;
+  height: 50%;
   overflow: hidden;
+  outline : 2px solid #DCE4F7;
 }
 .hotels{
   width: 50%;
-  height: 35%;
-  border-right: 2px solid;
-  border-bottom: 2px solid;
+  height: 50%;
+  outline : 2px solid #DCE4F7;
   overflow: hidden;
 }
 .dresscode{
   width: 50%;
-  height: 35%;
+  height: 50%;
   overflow: hidden;
-  border-right: 2px solid;
+
+  outline : 2px solid #DCE4F7;
 }
 .dresscode * {
   cursor: pointer;
 }
 .rsvp{
   width: 50%;
-  height: 35%;
-  border-right: 2px solid;
-  border-bottom: 2px solid;
+  height: 50%;
+  overflow: hidden;
+  outline : 2px solid #DCE4F7;
+  /* outline : 2px solid black; */
+  /* border-bottom: 2px solid; */
 }
 .boda{
   width: 100%;
   height: 32%;
   overflow: hidden;
-  border-bottom: 2px solid;
-  border-top: 2px solid;
+  border-top: 2px solid #DCE4F7;
+  display: flex;
+  justify-content: center;
 }
 .bottom_icons{
+  outline : 2px solid #DCE4F7;
   width: 100%;
   display: flex;
+  overflow: visible;
+  /* flex-direction: row; */
   flex-wrap: wrap;
   background-image: url('https://i.imgur.com/7lrX98H.jpg');
 }
@@ -236,20 +252,57 @@ cursor: pointer;
   box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.15);
   transition: box-shadow 0.35s ease;
 }
+/* .slick-next {
+    right: 50px;
+}
+.slick-prev {
+    left: -25px;
+} */
 /* ////////DressCode/////////////////// */
 
 .dresscode__wrapper{
   height: 100vh;
   background-image: url('https://i.imgur.com/7lrX98H.jpg');
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Amatic SC';
+  font-size: 24px;
 
 }
-.dressImageWrapper{
-  height: 200px;
-  width: 200px;
-  background-color: lime;
+.elles > h3 {
+  font-size: 40px;
+  font-weight: bold;
 }
+.elles > h5 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.ells > h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.ells > h5 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.elles{
+  margin-top: 15%;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.ells{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
 
 
 /* ////////////////HORARI////////////////////// */
@@ -306,6 +359,56 @@ border:1px solid #021a40;
   width: 100%;
   height: 100vh;
   background-image: url('https://i.imgur.com/7lrX98H.jpg');
+}
+
+.buttonSumitRsvp {
+  color: #000000;
+  background-color: #C6EFF2;
+  border-color: #1EBABA;
+  width: 30%;
+  margin-top: 5%;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+}
+
+.buttonSumitRsvp:hover,
+.buttonSumitRsvp:focus,
+.buttonSumitRsvp:active,
+.buttonSumitRsvp.active,
+.open .dropdown-toggle.buttonSumitRsvp {
+  color: #000000;
+  background-color: #6FE8E2;
+  border-color: #1EBABA;
+}
+
+.buttonSumitRsvp:active,
+.buttonSumitRsvp.active,
+.open .dropdown-toggle.buttonSumitRsvp {
+  background-image: none;
+}
+
+.buttonSumitRsvp.disabled,
+.buttonSumitRsvp[disabled],
+fieldset[disabled] .buttonSumitRsvp,
+.buttonSumitRsvp.disabled:hover,
+.buttonSumitRsvp[disabled]:hover,
+fieldset[disabled] .buttonSumitRsvp:hover,
+.buttonSumitRsvp.disabled:focus,
+.buttonSumitRsvp[disabled]:focus,
+fieldset[disabled] .buttonSumitRsvp:focus,
+.buttonSumitRsvp.disabled:active,
+.buttonSumitRsvp[disabled]:active,
+fieldset[disabled] .buttonSumitRsvp:active,
+.buttonSumitRsvp.disabled.active,
+.buttonSumitRsvp[disabled].active,
+fieldset[disabled] .buttonSumitRsvp.active {
+  background-color: #C6EFF2;
+  border-color: #1EBABA;
+}
+
+.buttonSumitRsvp .badge {
+  color: #C6EFF2;
+  background-color: #000000;
 }
 .rsvp__left{
   display: flex;
@@ -387,10 +490,10 @@ border:1px solid #021a40;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
 	background-color:#6c7c7c;
 }
-#form2{
+/* #form2{
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* /////////////////////////CARROUSELS IMAGES//////////////////////////// */
 .morvedra__carousel{

@@ -53,10 +53,10 @@ renderButton = ()=> {
             <h3>Vindras amb acompanyant?</h3>
             <h3>Nom i Cognom del acompanyant</h3>
             <input value={this.state.acompanyant} onChange={evt => this.captureNomAcompanyant(evt)}/>
-
+            <button className="buttonSumitRsvp" disabled={!this.state.nom} onClick={this.sendConfirmation}>Enviar</button>
           </div>
 
-          {/* <button ref={btn} disabled={!this.state.nom} onClick={this.sendConfirmation}>Enviar</button> */}
+
         </div>
         {/* {this.renderButton()} */}
       </div>

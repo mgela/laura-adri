@@ -8,7 +8,7 @@ export default class Regals extends Component {
     return (
       <div className="horari__wrapper">
         <div className="horariImageWrapper">
-          <h1>PERQUE PAGUI LA GENT JEJE</h1>
+          <h1>2100...........</h1>
         </div>
         <div>
         </div>
