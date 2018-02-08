@@ -46,20 +46,19 @@ renderButton = ()=> {
             <img className="rsvp__image" src={platja}/>
         </div>
         <div className="rsvp__left">
-          <form>
+          <div className="form__1">
             <h3>Confirma la teva Assistencia</h3>
             <h3>Nom i Cognom</h3>
             <input value={this.state.nom} onChange={evt => this.captureNom(evt)}/>
-          </form>
-          <form>
             <h3>Vindras amb acompanyant?</h3>
             <h3>Nom i Cognom del acompanyant</h3>
             <input value={this.state.acompanyant} onChange={evt => this.captureNomAcompanyant(evt)}/>
-          </form>
-          {this.renderButton()}
+
+          </div>
+
           {/* <button ref={btn} disabled={!this.state.nom} onClick={this.sendConfirmation}>Enviar</button> */}
         </div>
-
+        {/* {this.renderButton()} */}
       </div>
     );
   }
