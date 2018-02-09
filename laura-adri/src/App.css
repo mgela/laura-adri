@@ -113,12 +113,12 @@ cursor: pointer;
   width: 50%;
   height: 50%;
 
-  outline : 2px solid #DCE4F7;
+  /* outline : 2px solid #DCE4F7; */
 }
 .hotels{
   width: 50%;
   height: 50%;
-  outline : 2px solid #DCE4F7;
+  /* outline : 2px solid #DCE4F7; */
 
 }
 .dresscode{
@@ -126,7 +126,7 @@ cursor: pointer;
   height: 50%;
 
 
-  outline : 2px solid #DCE4F7;
+  /* outline : 2px solid #DCE4F7; */
 }
 .dresscode * {
   cursor: pointer;
@@ -135,18 +135,18 @@ cursor: pointer;
   width: 50%;
   height: 50%;
 
-  outline : 2px solid #DCE4F7;
+  /* outline : 2px solid #DCE4F7; */
 
 }
 .boda{
   width: 100%;
   height: 32%;
-  border-top: 2px solid #DCE4F7;
+  /* border-top: 2px solid #DCE4F7; */
   display: flex;
   justify-content: center;
 }
 .bottom_icons{
-  outline : 2px solid #DCE4F7;
+  /* outline : 2px solid #DCE4F7; */
   width: 100%;
   display: flex;
   /* overflow: visible; */
